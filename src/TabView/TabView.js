@@ -25,7 +25,7 @@ export default class TabView extends React.Component {
 		return (
 			<div className='tab-view-container'>
 				<div className='tab-items'>
-					{this.props.tabs.map((tab,index) => (
+					{this.props.tabs.map((tab, index) => (
 						<TabLink
 							activeTabId={this.state.activeTabId}
 							clickCallback={this.updateActiveTab}

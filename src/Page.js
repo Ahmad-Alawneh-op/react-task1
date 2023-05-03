@@ -20,7 +20,7 @@ export default class Page extends React.Component {
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.pageId !== this.props.pageId) {
-			this.setState({ activePageId: this.props.tabId, activeTabId:  defaultTabIdByPageId[this.props.pageId]})
+			this.setState({ activePageId: this.props.tabId, activeTabId: defaultTabIdByPageId[this.props.pageId]})
 		}
 	}
 

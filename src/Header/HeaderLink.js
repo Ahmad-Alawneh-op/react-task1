@@ -8,13 +8,13 @@ export default class HeaderLink extends React.Component {
 	}
 
 	clickCallback() {
-		this.props.clickCallback?.(this.props.tabId);
+		this.props.clickCallback?.(this.props.pageId);
 	}
 
 	render() {
 		return (
-			<div className={'link-container ' + (this.props.tabId === this.props.activeTabId ? 'link-active' : '')}>
-				<Link to={`/${this.props.tabId}`}><button onClick={this.clickCallback}>{this.props.children}</button></Link>
+			<div className={'link-container ' + (this.props.pageId === this.props.activePageId ? 'link-active' : '')}>
+				<Link to={`/${this.props.pageId}`}><button onClick={this.clickCallback}>{this.props.children}</button></Link>
 			</div>
 		)
 	}
