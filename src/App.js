@@ -43,10 +43,10 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { activeTabId: 'home' };
-		this.onTabChange = this.onTabChange.bind(this);
+		this.onPageChange = this.onPageChange.bind(this);
 	}
 
-	onTabChange(newTabId) {
+	onPageChange(newTabId) {
 		this.setState({ activeTabId: newTabId });
 	}
 
@@ -57,7 +57,7 @@ class App extends React.Component {
 				<div className='main-container'>
 					<BrowserRouter>
 						<div className='header-container'>
-							<Header activeTabId={this.state.activeTabId} onTabChange={this.onTabChange}></Header>
+							<Header activePageId={this.state.activeTabId} onPageChange={this.onPageChange}></Header>
 						</div>
 						<Routes>
 							{routeData.map((route, index) => (

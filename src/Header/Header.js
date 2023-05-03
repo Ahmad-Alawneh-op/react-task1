@@ -17,8 +17,8 @@ export default class Header extends React.Component {
 	}
 
 	updateActivePage(newPageId) {
-		this.setState({activePageId: newPageId});
-		this.props.onTabChange(newPageId);
+		this.setState({ activePageId: newPageId });
+		this.props.onPageChange(newPageId);
 	}
 
 	render() {
@@ -27,7 +27,7 @@ export default class Header extends React.Component {
 				{pageLinks.map((page, index) => (
 					<HeaderLink
 						activePageId={this.state.activePageId}
-						clickCallback={this.updateActivePage}
+						onPageUpdated={this.updateActivePage}
 						pageId={page.id}
 						key={index}>{page.title}</HeaderLink>
 				))}
